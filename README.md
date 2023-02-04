@@ -28,7 +28,7 @@ figure out where the mines must be located. Future iterations of this game would
 user interface to make for more engaging and intuitive play. <br/><br/>
 
 **Installation**<br/> 
-This program doe snot require installation. <br/><br/>
+This program does not require installation. <br/><br/>
 **How to Use**<br/> 
 1. Open the project in a Java IDE, such as Intellij. 
 2. Create a new run configuration.
