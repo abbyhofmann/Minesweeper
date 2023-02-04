@@ -5,15 +5,25 @@ import model.Board;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests methods for the Board class.
+ */
 class BoardTest {
 
   Board board1;
 
+  /**
+   * Initializes a new board with the default configuration - 7x7 board with mines located at (1,2),
+   * (4,4), and (4,2) with 0-based indexing.
+   */
   @BeforeEach
   public void setup() {
     this.board1 = new Board();
   }
 
+  /**
+   * Tests the default constructor for initializing a board.
+   */
   @Test
   public void testDefaultConstructor() {
     assertEquals(false, this.board1.getBoard()[0][0].isMine());
@@ -28,6 +38,9 @@ class BoardTest {
 
   }
 
+  /**
+   * Tests the setNeighbors method.
+   */
   @Test
   public void testSetNeighbors() {
     assertEquals(1, this.board1.getBoard()[0][1].getAdjMines());
@@ -56,18 +69,21 @@ class BoardTest {
     assertEquals(0, this.board1.getBoard()[6][6].getAdjMines());
   }
 
+  /**
+   * Tests the isValidCell method.
+   */
   @Test
   public void testIsValidCell() {
-    assertEquals(false, this.board1.isValidCell(7,7));
-    assertEquals(false, this.board1.isValidCell(10,6));
-    assertEquals(false, this.board1.isValidCell(0,12));
-    assertEquals(false, this.board1.isValidCell(-1,5));
-    assertEquals(false, this.board1.isValidCell(2,-20));
-    assertEquals(false, this.board1.isValidCell(-1,-1));
-    assertEquals(true, this.board1.isValidCell(0,0));
-    assertEquals(true, this.board1.isValidCell(0,6));
-    assertEquals(true, this.board1.isValidCell(6,0));
-    assertEquals(true, this.board1.isValidCell(6,6));
+    assertEquals(false, this.board1.isValidCell(7, 7));
+    assertEquals(false, this.board1.isValidCell(10, 6));
+    assertEquals(false, this.board1.isValidCell(0, 12));
+    assertEquals(false, this.board1.isValidCell(-1, 5));
+    assertEquals(false, this.board1.isValidCell(2, -20));
+    assertEquals(false, this.board1.isValidCell(-1, -1));
+    assertEquals(true, this.board1.isValidCell(0, 0));
+    assertEquals(true, this.board1.isValidCell(0, 6));
+    assertEquals(true, this.board1.isValidCell(6, 0));
+    assertEquals(true, this.board1.isValidCell(6, 6));
   }
 
 }

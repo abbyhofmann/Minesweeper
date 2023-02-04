@@ -6,6 +6,7 @@ import java.util.Scanner;
 import model.Model;
 import view.View;
 
+
 public class ControllerImpl implements Controller {
 
   private final Model gameModel;
@@ -97,7 +98,7 @@ public class ControllerImpl implements Controller {
     }
   }
 
-//  todo: add to interface
+  //  todo: add to interface
   private void reenterMessage() {
     try {
       this.gameView.renderMessage("Please reenter value: \n");
